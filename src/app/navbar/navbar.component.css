@@ -1,0 +1,21 @@
+.marty-nav {
+  color: #f7f9f9;
+  font-family: "Geologica", "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+.marty-nav:hover {
+  color: #bed8d4;
+}
+
+.marty-header {
+  color: #f7f9f9;
+  font-size: 25px;
+  font-family: "Geologica", "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+
+.marty-header:hover {
+  color: #bed8d4;
+}
+
+.navbar-toggler-icon{
+  color: #f7f9f9;
+}
