@@ -1,21 +1,29 @@
-.marty-nav {
-  color: #f7f9f9;
-  font-family: "Geologica", "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
+.marty-bar{
+  width: calc(100vw - 17px);
 }
-.marty-nav:hover {
-  color: #bed8d4;
+
+.marty-bar-pos{
+  top:100vh;
+  position: absolute;
+  z-index:10;
+  pointer-events: all;
 }
 
 .marty-header {
-  color: #f7f9f9;
-  font-size: 25px;
+  color: white;
+  font-size: calc(1vw * 1.5);
   font-family: "Geologica", "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  top: .3vw;
 }
 
 .marty-header:hover {
   color: #bed8d4;
+  transition: all .25s ease;
 }
 
-.navbar-toggler-icon{
-  color: #f7f9f9;
+img{
+  height: calc(2vw * 1.2);
 }

@@ -1,0 +1,59 @@
+* { box-sizing: border-box; position:relative;}
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: transparent;
+  margin-top: 15vh;
+}
+
+.carousel-cell {
+  width: 51%;
+  height: 60vh;
+  margin-right: 50px;
+  background: white;
+  border-radius: 10px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.car-top{
+  height: 23%;
+  width: 100%;
+  padding: 0;
+  background-image: linear-gradient(to bottom, #2081c3, #63d2ff);
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: "Geologica", "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+
+.car-img{
+  position: absolute;
+  object-fit: contain;
+  max-width: inherit;
+  max-height: inherit;
+  height: 66%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px white;
+  top: 15%;
+  left: 5%;
+}
+
+.car-title{
+  left: 20%;
+  top: 10%;
+  font-size: 1.1vw
+}
+
+.car-text{
+  font-size: .95vw;
+}

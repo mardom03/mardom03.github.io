@@ -2,15 +2,16 @@
     margin: 0;
     padding: 0;
     font-family: Geologica, sans-serif;
+    right:1px
 }
 
 .top-screen{
-    background: #f7f9f9;
+    background: white;
 }
 
 .bg{
     position:absolute;
-    width: 100%;
+    width: calc(100vw - 17px);
     height: 100%;
     object-fit: cover;
     pointer-events: none;
@@ -32,7 +33,7 @@
 }
 
 .title-small{
-    font-size: 3em;
+    font-size: 3vw;
     color: #38d5d7;
     text-shadow: 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
 }
@@ -42,13 +43,13 @@
     white-space: nowrap;
     width: max-content;
     animation: 
-      typing 2.5s steps(40, end),
+      typing 2s steps(40, end),
       blink-caret .75s step-end 10;
   }
   
   @keyframes typing {
     from { width: 0 }
-    to { width: 340px }
+    to { width: calc(3vw*7.2) }
   }
   
   @keyframes blink-caret {
@@ -60,11 +61,11 @@
 
   .name-fade{
     position:relative;
-    font-size: 6em;
+    font-size: 7vw;
     left: -10vw;
-    width: 50vw;
+    width: 48vw;
     font-family: Rockwell;
-    color: #f7f9f9;
+    color: white;
     text-shadow: 3px 3px black, -3px -3px black, -3px 3px black, 3px -3px black, 0px 3px black, 0px -3px black;
     text-align: center;
     opacity:0;
@@ -73,16 +74,21 @@
 
   .name-fade1{
     top: 9vh;
-    animation: fadeIn 2s 3s forwards;
+    animation: fadeIn0 1.5s 2s forwards;
   }
 
   .name-fade2{
     top: 6vh;
-    animation: fadeIn 2s 4s forwards;
+    animation: fadeIn1 1.5s 2s forwards;
   }
 
-  @keyframes fadeIn{
+  @keyframes fadeIn0{
     from {opacity:0; top:12vh;}
+    to {opacity:1;}
+  }
+
+  @keyframes fadeIn1{
+    from {opacity:0; top:9vh;}
     to {opacity:1;}
   }
 
@@ -92,28 +98,29 @@
     text-align: center;
     opacity:0;
     white-space: nowrap;
+    font-size: 2vw;
   }
 
   .title-desc1{
-    top: 39vh;
+    top: 45vh;
     left: -105px;
-    animation: fadeIn2 2s 6s forwards;
+    animation: fadeIn2 1.5s 3s forwards;
   }
 
   .title-desc2{
-    top: 45vh;
+    top: 52vh;
     left: 27px;
-    animation: fadeIn2 2s 7s forwards;
+    animation: fadeIn2 1.5s 3s forwards;
   }
 
   .title-desc3{
-    top: 51vh;
+    top: 59vh;
     left: -13px;
-    animation: fadeIn2 2s 8s forwards;
+    animation: fadeIn2 1.5s 3s forwards;
   }
 
   @keyframes fadeIn2{
-    from {opacity:0; top:60vh;}
+    from {opacity:0; top:69vh;}
     to {opacity:1;}
   }
   
@@ -126,25 +133,26 @@
     color: white;
     text-shadow: 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
     opacity: 0;
-    animation: fadeIn3 2s 10s forwards;
+    animation: fadeIn3 1.5s 4s forwards;
   }
 
   .about-img{
     position:absolute;
-    height: 50px;
-    width: 50px;
+    height: 4vw;
+    width: 4vw;
+    margin-left: 0;
     left: 165px;
     top: 0px;
-    animation: chevron 1.5s 12s ease-in-out 8;
+    animation: chevron 1.5s 5s ease-in-out 8;
   }
 
   @keyframes fadeIn3{
-    from {opacity:0; top:93vh;}
+    from {opacity:0;}
     to {opacity:1;}
   }
 
   @keyframes chevron{
     from, to {opacity:1;}
-    49% {opacity:0; top:10px}
-    50% {opacity:0; top:-10px}
+    50% {opacity:0; top:10px}
+    51% {opacity:0; top:-10px}
   }
