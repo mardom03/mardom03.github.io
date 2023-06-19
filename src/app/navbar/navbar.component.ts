@@ -45,6 +45,7 @@ export class NavbarComponent {
   }
 
   @HostListener("window:scroll", []) onWindowScroll() {
+    console.log(this.getScroll() + " " + window.innerHeight)
     this.navclass = (this.getScroll() < window.innerHeight) ? "marty-bar-pos" : "sticky-top";
   }
   

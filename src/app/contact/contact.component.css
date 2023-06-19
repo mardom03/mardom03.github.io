@@ -1,0 +1,56 @@
+a{
+    text-decoration: none;
+    margin:0;
+}
+
+.contact-page-init{
+    position:relative;
+    top:115vh;
+}
+
+.contact-page{
+    position:relative;
+    top:108vh;
+}
+
+.background{
+    background-color: #f0f1f1;
+    height:100vh;
+    padding-bottom: 10%;
+}
+
+.title{
+    position: relative;
+    color:black;
+    top: calc(3vw * 1.5);
+}
+
+.box{
+    position:relative;
+    height: 10vw;
+    width: 20vw;
+    background-color: white;
+    color:black;
+    padding:10px;
+    transition: ease-in-out .15s;
+    border-radius: 2px;
+}
+
+.box:hover{
+    transform: translateY(-15px);
+    box-shadow: 10px 15px 5px grey;
+}
+
+img{
+    width:2.2vw;
+    padding-bottom:5px;
+}
+
+h2{
+    font-size:2vw;
+}
+
+h5{
+    font-size:1.5vw;
+    padding-top: 3%;
+}
