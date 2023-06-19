@@ -5,6 +5,7 @@ body { font-family: sans-serif; }
 .carousel {
   background: transparent;
   margin-top: 15vh;
+  width: inherit;
 }
 
 .carousel-cell {
@@ -56,4 +57,5 @@ body { font-family: sans-serif; }
 
 .car-text{
   font-size: .95vw;
+  padding:5px;
 }
