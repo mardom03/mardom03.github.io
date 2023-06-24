@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./root.component.css']
 })
 export class RootComponent {
-
+  allowedSize(){
+    return $(window).width() > 820;
+  }
 }

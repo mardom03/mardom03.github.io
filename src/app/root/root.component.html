@@ -1,7 +1,8 @@
-<app-navbar></app-navbar>
-<app-homepage></app-homepage>
-<app-about></app-about>
-<app-experience></app-experience>
-<app-projects></app-projects>
-<app-contact></app-contact>
-<br><br><br><br><br><br><br><br>
+<div *ngIf="allowedSize(); else elseBlock"><app-navbar></app-navbar>
+    <app-homepage></app-homepage>
+    <app-about></app-about>
+    <app-experience></app-experience>
+    <app-projects></app-projects>
+    <app-contact></app-contact>
+    <br><br><br><br><br><br><br><br></div>
+<ng-template #elseBlock>Sorry, this page is not optimized for smaller screen sizes yet. I have saved your eyes from being forced to look at this monstrosity</ng-template>
