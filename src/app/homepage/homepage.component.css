@@ -44,7 +44,7 @@
     width: max-content;
     animation: 
       typing 2s steps(40, end),
-      blink-caret .75s step-end 10;
+      blinkcaret .75s step-end 10;
   }
   
   @keyframes typing {
@@ -52,7 +52,7 @@
     to { width: calc(3vw*7.2) }
   }
   
-  @keyframes blink-caret {
+  @keyframes blinkcaret {
     from, to { border-right: transparent; }
     50% { border-right: solid white;}
     from, to { border-left: transparent; }
