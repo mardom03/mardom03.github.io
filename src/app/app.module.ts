@@ -14,6 +14,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { SafeComponent } from './safe/safe.component';
 import { RootComponent } from './root/root.component';
+import { VdayComponent } from './vday/vday.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RootComponent } from './root/root.component';
     ProjectsComponent,
     ContactComponent,
     SafeComponent,
-    RootComponent
+    RootComponent,
+    VdayComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { RootComponent } from './root/root.component';
     NgbModule,
     RouterModule.forRoot([
       {path: 'a', component: SafeComponent},
-      {path: '', component: RootComponent}
+      {path: '', component: RootComponent},
+      {path: 'iloveyou', component: VdayComponent}
     ]),
   ],
   providers: [],
