@@ -1,0 +1,15 @@
+<div class="bodyVal">
+    <div class="container">
+        <div *ngIf="count < 12; else elseBlock">
+            <img src="assets\images\cookiemonster.png" style="padding: 30px" draggable="false">
+            <button class="button" [style]="buttonStyle" [innerText]="buttonText" (click)="success()"></button>
+            <button class="button" [style]="buttonStyle2" [innerText]="buttonText2" (click)="buttonClick()">No</button>
+        </div>
+        <ng-template #elseBlock>
+            <img src="assets\images\heart-hearts.gif" draggable="false" style="max-height:30vh;">
+            <img src="assets\images\iloveyou.png" style="padding: 30px" draggable="false">
+            <img src="assets\images\WordHeart.png" draggable="false" style="max-height:30vh; border-radius: 5px;">
+        </ng-template>
+        
+    </div>
+</div>
