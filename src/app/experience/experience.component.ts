@@ -6,20 +6,11 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
-  experienceclass: string = "experience-page-init";
 
   constructor(){
     window.addEventListener("scroll", this.reveal);
   }
-
-  getScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-  }
-
-  @HostListener("window:scroll", []) onWindowScroll() {
-    this.experienceclass = (this.getScroll() > window.innerHeight) ? "experience-page" : "experience-page-init";
-  }
-
+  
   reveal() {
     var reveals = document.querySelectorAll(".reveal");
   

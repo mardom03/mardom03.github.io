@@ -6,47 +6,48 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  navclass: string = "marty-bar-pos";
+  constructor(){ }
+  
+  isMenuOpen = false;
 
-  constructor(){
-    window.addEventListener("scroll", this.reveal);
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
+
   reveal() {
-    var bar = document.querySelector("#bar-thing");
-    var about = document.querySelector("#about")?.getBoundingClientRect().top;
-    var experience = document.querySelector("#experience")?.getBoundingClientRect().top;
-    var projects = document.querySelector("#projects")?.getBoundingClientRect().top;
-    var contact = document.querySelector("#contact")?.getBoundingClientRect().top;
-    var windowHeight = window.innerHeight;
+    const bar = document.querySelector("#bar-thing");
+    const about = document.querySelector("#about")?.getBoundingClientRect().top;
+    const experience = document.querySelector("#experience")?.getBoundingClientRect().top;
+    const projects = document.querySelector("#projects")?.getBoundingClientRect().top;
+    const contact = document.querySelector("#contact")?.getBoundingClientRect().top;
+    const threshold = 50;
 
-      if (contact != null && contact + windowHeight - 5 < windowHeight) {
-        bar?.removeAttribute("class");
-        bar?.classList.add("contact");
-      }
-      else if (projects != null && projects + windowHeight - 5 < windowHeight) {
-        bar?.removeAttribute("class");
-        bar?.classList.add("projects");
-      }
-      else if (experience != null && experience + windowHeight - 5 < windowHeight) {
-        bar?.removeAttribute("class");
-        bar?.classList.add("experience");
-      }
-      else if (about != null && about + windowHeight - 5 < windowHeight) {
-        bar?.removeAttribute("class");
-        bar?.classList.add("about");
-      }
-      else{
-        bar?.removeAttribute("class");
-      }
+    // clear first
+    bar?.removeAttribute("class");
+
+    if (contact != null && contact < threshold) {
+      bar?.classList.add("contact");
+    }
+    else if (projects != null && projects < threshold) {
+      bar?.classList.add("projects");
+    }
+    else if (experience != null && experience < threshold) {
+      bar?.classList.add("experience");
+    }
+    else if (about != null && about < threshold) {
+      bar?.classList.add("about");
+    }
   }
 
-  getScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-  }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.reveal();
 
-  @HostListener("window:scroll", []) onWindowScroll() {
-    console.log(this.getScroll() + " " + window.innerHeight)
-    this.navclass = (this.getScroll() < window.innerHeight) ? "marty-bar-pos" : "sticky-top";
+    const nav = document.querySelector('.marty-bar');
   }
   
 }

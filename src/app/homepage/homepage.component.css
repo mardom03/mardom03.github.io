@@ -1,39 +1,15 @@
 *{
-    margin: 0;
-    padding: 0;
     font-family: Geologica, sans-serif;
-    right:1px
 }
 
 .top-screen{
-    background: white;
-}
-
-.bg{
-    position:absolute;
-    width: calc(100vw - 17px);
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-.marty{
-    position:absolute;
-    height: 90vh;
-    left: 10vw;
-    top: 10vh;
-}
-
-.title{
-    position:absolute;
-    height: 40vh;
-    width: 30vw;
-    top: 15vh;
-    left: 60vw;
+  background-image: url('/assets/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
 
 .title-small{
-    font-size: 3vw;
     color: #38d5d7;
     text-shadow: 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
 }
@@ -49,21 +25,29 @@
   
   @keyframes typing {
     from { width: 0 }
-    to { width: calc(3vw*7.2) }
+    to { width: 220px }
   }
-  
+
+  @keyframes typing-lg {
+    from { width: 0 }
+    to { width: 350px }
+  }
+
+  @media (min-width: 1024px) {
+    .title-typewriter{
+      animation: 
+        typing-lg 2s steps(40, end),
+        blinkcaret .75s step-end 10;
+    }
+  }
+
   @keyframes blinkcaret {
     from, to { border-right: transparent; }
     50% { border-right: solid white;}
-    from, to { border-left: transparent; }
-    50% { border-left: solid transparent;}
   }
 
   .name-fade{
     position:relative;
-    font-size: 7vw;
-    left: -10vw;
-    width: 48vw;
     font-family: Rockwell;
     color: white;
     text-shadow: 3px 3px black, -3px -3px black, -3px 3px black, 3px -3px black, 0px 3px black, 0px -3px black;
@@ -73,63 +57,41 @@
   }
 
   .name-fade1{
-    top: 9vh;
-    animation: fadeIn0 1.5s 2s forwards;
+    animation: fadeIn 1.5s 2s forwards;
   }
 
   .name-fade2{
-    top: 6vh;
-    animation: fadeIn1 1.5s 2s forwards;
+    animation: fadeIn 1.5s 3s forwards;
   }
 
-  @keyframes fadeIn0{
-    from {opacity:0; top:12vh;}
-    to {opacity:1;}
-  }
-
-  @keyframes fadeIn1{
-    from {opacity:0; top:9vh;}
-    to {opacity:1;}
+  @keyframes fadeIn{
+    from {opacity:0; top:50px;}
+    to {opacity:1; top:0px;}
   }
 
   .title-desc{
-    position:absolute;
-    width: 30vw;
-    text-align: center;
     opacity:0;
     white-space: nowrap;
-    font-size: 2vw;
   }
 
   .title-desc1{
-    top: 45vh;
-    left: -105px;
-    animation: fadeIn2 1.5s 3s forwards;
+    animation: fadeIn2 1.5s 4s forwards;
   }
 
   .title-desc2{
-    top: 52vh;
-    left: 27px;
-    animation: fadeIn2 1.5s 3s forwards;
+    animation: fadeIn2 1.5s 4s forwards;
   }
 
   .title-desc3{
-    top: 59vh;
-    left: -13px;
-    animation: fadeIn2 1.5s 3s forwards;
+    animation: fadeIn2 1.5s 4s forwards;
   }
 
   @keyframes fadeIn2{
-    from {opacity:0; top:69vh;}
-    to {opacity:1;}
+    from {opacity:0; top:50px;}
+    to {opacity:1; top:0px;}
   }
   
   .about{
-    position:absolute;
-    top:85vh;
-    left: 70vw;
-    height: 20px;
-    font-size: 3em;
     color: white;
     text-shadow: 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
     opacity: 0;
@@ -137,13 +99,7 @@
   }
 
   .about-img{
-    position:absolute;
-    height: 4vw;
-    width: 4vw;
-    margin-left: 0;
-    left: 12vw;
-    top: 0px;
-    animation: chevron 1.5s 5s ease-in-out 8;
+    animation: chevron 1.5s 5s ease-in-out 5;
   }
 
   @keyframes fadeIn3{
@@ -153,6 +109,6 @@
 
   @keyframes chevron{
     from, to {opacity:1;}
-    50% {opacity:0; top:10px}
-    51% {opacity:0; top:-10px}
+    50% {opacity:0; transform: translatey(10px)}
+    51% {opacity:0; transform: translatey(-10px)}
   }

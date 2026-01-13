@@ -8,80 +8,40 @@ a{
     padding-bottom: 10%;
 }
 
-.projects-page-init{
-    position:relative;
-    top:115vh;
-}
-
-.projects-page{
-    position:relative;
-    top:108vh;
-}
-
-.title{
-    position: relative;
-    color:white;
-    top: calc(3vw * 1.5);
-}
-
-.projects{
+.background-album{
     background-color: #181818;
-    border-radius: 10px;
-    position: relative;
-    margin-top:15vh;
-    height: 70%;
-    width: 70%;
 }
 
-.album{
-    position: absolute;
-    width: 20%;
-    left: 3%;
-    padding-top: 3%;
+.layout {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: min-content;
+    align-items: start;
+    grid-template-areas:
+        "one two"
+        "three three";
+    margin-bottom: 24px;
 }
 
-.projtitle{
-    position: relative;
-    color:white;
-    left:18vw;
-    width: max-content;
-    padding-top:3%;
-    font-size:2.5vw;
+@media (min-width: 768px) {
+  .layout {
+    gap: 16px;
+    grid-template-areas:
+      "one two"
+      "one three";
+    margin-bottom: 42px;
+  }
 }
 
-.projsubtitle{
-    position: relative;
-    left:18vw;
-    width: max-content;
-    color:rgba(255, 255, 255, 0.705);
-    top:5%;
-    font-size:1.5vw;
-}
-
-.playtext{
-    position: relative;
-    left:19vw;
-    top:5%;
-    color:rgba(255, 255, 255, 0.705);
-    display: flex;
-    width:67%;
-    font-size:1.5vw;
-}
-
-.playbar{
-    position: relative;
-    width:70%;
-    left:18vw;
-    top:5%;
-    padding-bottom:3%;
-}
+.el1 { grid-area: one; }
+.el2 { grid-area: two; }
+.el3 { grid-area: three; }
 
 .songs{
     position: relative;
     justify-content: center;
     width:99%;
-    top:10%;
-    padding-bottom:1%;
 }
 
 .song{
@@ -99,12 +59,10 @@ a{
     position:relative;
     color:white;
     top:7px;
-    font-size: 1.5vw;
 }
 
 .song-artist{
     color:rgba(255, 255, 255, 0.705);
     display:flex;
-    font-size: 1.2vw;
     width:95%;
 }

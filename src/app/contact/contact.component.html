@@ -1,24 +1,12 @@
-<div class="background {{contactclass}}" id="contact">
-    <h1 class="text-center title">Contact Me</h1>
-    <p class="text-center" style="padding-top: 20vh; padding-inline: 20%;">Thank you for visiting! Feel free to reach out to me with any inquiries, 
+<div class="background min-h-[100vh]" id="contact">
+    <h1 class="text-center text-black py-20">Contact Me</h1>
+    <p class="text-center md:max-w-4xl px-4 mx-auto">Thank you for visiting! Feel free to reach out to me with any inquiries, 
         collaboration opportunities, or simply to connect and discuss our shared interests. I look forward to hearing 
         from you and engaging in meaningful conversations.</p>
-    <div class="row justify-content-between px-5 text-center" style="padding-top:10vh; margin:0">
-        <a class="col-3 box text-center" href="mailto:mardom03@yahoo.com">
-            <h2><img src="assets\images\email.png"> Email</h2>
-            <h5>mardom03@yahoo.com</h5>
-        </a>
-        <a class="col-3 box" href="tel:+17152527459">
-            <h2><img src="assets\images\phone.png"> Phone</h2>
-            <h5>+1 (715) 252-7459</h5>
-        </a>
-        <a class="col-3 box" href="https://www.linkedin.com/in/martin-domaradzki-487058235/" target="_blank">
-            <h2><img src="assets\images\linkedin-black.png"> Linkedin</h2>
-            <h5>@martin-domaradzki</h5>
-        </a>
-        <a class="col-3 box" href="https://github.com/mardom03" target="_blank">
-            <h2><img src="assets\images\github-black.png" style="width:2.5vw;"> Github</h2>
-            <h5>@mardom03</h5>
+    <div class="grid justify-center px-5 text-center md:mx-16 mt-12 md:mt-40">
+        <a *ngFor="let item of items" class="box text-center" [href]="item.link">
+            <h2><img [src]="item.imgSrc"> {{ item.title }}</h2>
+            <h5>{{ item.detail }}</h5>
         </a>
     </div>
 </div>

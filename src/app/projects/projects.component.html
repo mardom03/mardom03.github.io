@@ -1,49 +1,32 @@
-<div class="background {{projectsclass}} justify-content-center" id="projects">
-    <h1 class="text-center title">Projects</h1>
-    <div class="container projects">
-        <img class="album" src="assets\images\album.jpg">
-        <h2 class="projtitle">Algorhythms</h2>
-        <h3 class="projsubtitle">Martin Domaradzki</h3>
-        <div class="playtext justify-content-between"><span>0%</span><span>100%</span></div>
-        <img class="playbar" src="assets\images\music.svg">
-        <div class="container songs">
-            <a href="https://github.com/mardom03/Vix-Emailer" target="_blank">
-                <div class="song">
-                    <h5 class="song-title">Vix Emailer</h5>
-                    <h5 class="song-artist justify-content-between">
-                        <span>Simple Windows service to scrape Yahoo Finance and email me when VIX is high (C#)</span><span>2023</span>
-                    </h5>
-                </div>
-            </a>
-            <a href="https://github.com/mardom03/mardom03.github.io" target="_blank">
-                <div class="song">
-                    <h5 class="song-title">(This) Personal Website</h5>
-                    <h5 class="song-artist justify-content-between">
-                        <span>You're looking at it, in all its glory (Angular 16, Bootstrap 5, HTML, CSS, Javascript, Github
-                            Pages)</span><span>2023</span>
-                    </h5>
-                </div>
-            </a>
-            <a href="https://github.com/mardom03/scheduler" target="_blank">
-                <div class="song">
-                    <h5 class="song-title">CLI Course Scheduler</h5>
-                    <h5 class="song-artist justify-content-between">
-                        <span>Console app for generating course schedules (Java)</span><span>2021</span>
-                    </h5>
-                </div>
-            </a>
-            <a href="https://github.com/Cdogsnappy/Chess-Game" target="_blank">
-                <div class="song">
-                    <h5 class="song-title">CLI Chess Game</h5>
-                    <h5 class="song-artist justify-content-between">
-                        <span>Basic console chess game (Python)</span><span>2021</span>
-                    </h5>
-                </div>
-            </a>
+<div class="background justify-content-center px-4 md:min-h-[100vh]" id="projects">
+    <h1 class="text-center text-white py-20">Projects</h1>
+    <div class="container background-album rounded-xl p-4">
+        <div class="layout">
+            <img class="w-32 el1 md:w-80" src="assets\images\album.jpg">
+            <div class="el2">
+                <p class="text-white font-medium mb-1 md:mb-2 text-xl md:text-4xl">Algorhythms</p>
+                <p class="text-gray-300 text-lg md:text-3xl">Martin Domaradzki</p>
+            </div>
+            <div class="el3">
+                <div class="text-gray-300 flex justify-between md:text-xl px-1 md:mx-4"><span>0:00</span><span>13:37</span></div>
+                <img class="playbar" src="assets\images\music.svg">
+            </div>
+        </div>
+        <div class="container songs font-medium md:text-xl">
+            <div *ngFor="let project of projects">
+                <a [href]="project.link" target="_blank">
+                    <div class="song">
+                        <p class="song-title">{{ project.title }}</p>
+                        <p class="song-artist justify-content-between">
+                            <span class="pr-4">{{ project.description }}</span><span>{{ project.year }}</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
             <div class="song">
-                <h5 class="song-title">Coming Soon</h5>
-                <h5 class="song-artist justify-content-between"><span>???</span><span>???</span>
-                </h5>
+                <p class="song-title">Coming Soon</p>
+                <p class="song-artist justify-content-between"><span>???</span><span>???</span>
+                </p>
             </div>
         </div>
     </div>

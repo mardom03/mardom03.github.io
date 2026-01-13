@@ -1,13 +1,3 @@
-.about-page-init{
-    position:relative;
-    top:103vh;
-}
-
-.about-page{
-    position:relative;
-    top:96vh;
-}
-
 .noselect {
     color:transparent;
     cursor: default;

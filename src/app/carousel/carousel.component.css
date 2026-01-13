@@ -2,15 +2,18 @@
 
 body { font-family: sans-serif; }
 
+ul {
+  list-style: disc;
+}
+
 .carousel {
   background: transparent;
-  margin-top: 15vh;
   width: inherit;
 }
 
 .carousel-cell {
   width: 51%;
-  height: 60vh;
+  min-height: 600px;
   margin-right: 50px;
   background: white;
   border-radius: 10px;
@@ -27,7 +30,7 @@ body { font-family: sans-serif; }
 }
 
 .car-top{
-  height: 23%;
+  height: 130px;
   width: 100%;
   padding: 0;
   background-image: linear-gradient(to bottom, #2081c3, #63d2ff);
@@ -50,12 +53,35 @@ body { font-family: sans-serif; }
 }
 
 .car-title{
-  left: 20%;
+  left: 150px;
   top: 10%;
-  font-size: 1.1vw
+  font-size: 20px
 }
 
 .car-text{
-  font-size: .95vw;
-  padding:5px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    margin-top: 5vh;
+  }
+  .carousel-cell {
+    width: 80%;
+  }
+  .car-top{
+    height: 100px;
+  }
+  .car-img{
+    height: 50px;
+    top: 25%;
+  }
+  .car-title{
+    font-size: 1rem;
+    left: 75px;
+    top: 10%;
+    width: 100%;
+  }
+  
 }

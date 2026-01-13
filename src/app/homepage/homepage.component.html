@@ -1,31 +1,30 @@
-<div class="top-screen">
-    <img class="bg" src="\assets\images\bg.jpg"/>
-    <img class="marty" src="\assets\images\nobg.png"/>
-    <div class="title">
-        <h2 class="title-typewriter title-small mx-auto">
+<div class="top-screen relative h-[calc(var(--vh)*100)]">
+    <div class="absolute top-1/4 left-1/2 md:top-1/2 lg:left-[66%] xl:left-3/4 transform -translate-x-1/2 -translate-y-1/2">
+        <h2 class="title-typewriter title-small text-3xl lg:text-5xl">
             Hi, my name is
         </h2>
-    </div>
-    <div class="title">
-        <h1 class="name-fade name-fade1">
+        <h1 class="name-fade name-fade1 mt-4 text-4xl lg:mt-8 lg:text-7xl">
             Martin
         </h1>
-        <h1 class="name-fade name-fade2">
+        <h1 class="name-fade name-fade2 mt-2 mb-6 text-4xl lg:mt-4 lg:mb-12 lg:text-7xl">
             Domaradzki
         </h1>
+        <div class="title-small">
+            <h2 class="title-desc title-desc1 text-3xl lg:text-5xl">
+                I'm a <span style="color:white">software engineer,</span>
+            </h2>
+            <h2 class="title-desc title-desc2 text-3xl lg:text-5xl">
+                <span style="color:white">AI native innovator,</span>
+            </h2>
+            <h2 class="title-desc title-desc3 text-3xl lg:text-5xl">
+                and <span style="color:white">automation specialist</span>
+            </h2>
+        </div>
+        <div class="about">
+            <a href="#about"><img class="about-img fixed right-0 max-h-16 lg:max-h-24" src="\assets\images\chevron.png" /></a>
+        </div>
     </div>
-    <div class="title title-small">
-        <h2 class="title-desc title-desc1">
-            I'm an aspiring <span style="color:white">software engineer,</span>
-        </h2>
-        <h2 class="title-desc title-desc2">
-            <span style="color:white">quantitative analyst,</span>
-        </h2>
-        <h2 class="title-desc title-desc3">
-            and <span style="color:white">technology innovator</span>
-        </h2>
-    </div>
-    <div class="about">
-        <a href="#about"><img class="about-img" src="\assets\images\chevron.png" /></a>
+    <div class="absolute bottom-0">
+        <img class="bottom-0 left-0 w-full h-[calc(var(--vh)*60)] object-contain md:w-[35svw] md:max-h-none" src="\assets\images\nobg.png"/>
     </div>
 </div>

@@ -1,5 +1,11 @@
-<nav class="marty-bar {{navclass}}" style="background-image: linear-gradient(to bottom left, #2081c3, #63d2ff);">
-  <div class="container-fluid row" style="height:calc(3vw * 1.2); margin:0;">
+<div class="mobile-hamburger d-block d-md-none">
+  <button class="btn btn-link text-white" (click)="toggleMenu()" aria-label="Open navigation">
+    <span class="hamburger"><span></span><span></span><span></span></span>
+  </button>
+</div>
+
+<nav class="marty-bar d-none d-md-block" style="background-image: linear-gradient(to bottom left, #2081c3, #63d2ff); padding-bottom:10px;">
+  <div class="container-fluid row align-items-center" style="height:calc(3vw); margin:0;">
     <div id="bar-thing"></div>
     <div class="col-3">
       <a class="marty-header btn btn-link" type="button" href="#">Martin Domaradzki</a>
@@ -16,10 +22,23 @@
     <div class="col-2 text-center">
       <a class="marty-header marty-nav btn btn-link" type="button" href="#contact" style="width:100%; height:100%;">Contact</a>
     </div>
-    <div class="col-1 py-2" style="text-align: right;">
-      <a href="https://github.com/mardom03" target="_blank"><img src="\assets\images\icons8-github-256.png"/></a>
-      <a href="https://www.linkedin.com/in/martin-domaradzki-487058235/" target="_blank"><img src="\assets\images\icons8-linkedin-250.png"/></a>
+    <div class="col-1 py-2 socials">
+      <a href="https://github.com/mardom03" target="_blank" aria-label="GitHub"><img src="/assets/images/icons8-github-256.png" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/martin-domaradzki-487058235/" target="_blank" aria-label="LinkedIn"><img src="/assets/images/icons8-linkedin-250.png" alt="LinkedIn"/></a>
     </div>
   </div>
 </nav>
+
+<div class="mobile-overlay" *ngIf="isMenuOpen">
+  <div class="mobile-menu-inner">
+    <a class="mobile-link" href="#about" (click)="closeMenu()">About</a>
+    <a class="mobile-link" href="#experience" (click)="closeMenu()">Experience</a>
+    <a class="mobile-link" href="#projects" (click)="closeMenu()">Projects</a>
+    <a class="mobile-link" href="#contact" (click)="closeMenu()">Contact</a>
+    <div class="mobile-socials">
+      <a href="https://github.com/mardom03" target="_blank" aria-label="GitHub"><img src="/assets/images/icons8-github-256.png" class="min-w-8 min-h-8" alt="GitHub"/></a>
+      <a href="https://www.linkedin.com/in/martin-domaradzki-487058235/" target="_blank" aria-label="LinkedIn"><img src="/assets/images/icons8-linkedin-250.png" class="min-w-8 min-h-8" alt="LinkedIn"/></a>
+    </div>
+  </div>
+</div>
 

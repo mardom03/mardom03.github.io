@@ -1,4 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body.valentine {
     background-image: url('https://png.pngtree.com/png-clipart/20190520/original/pngtree-pattern-background-hearts-vector-png-image_3545865.jpg');

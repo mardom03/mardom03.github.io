@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -6,13 +6,4 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  aboutclass: string = "about-page-init";
-
-  getScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-  }
-
-  @HostListener("window:scroll", []) onWindowScroll() {
-    this.aboutclass = (this.getScroll() < window.innerHeight) ? "about-page-init" : "about-page";
-  }
 }
