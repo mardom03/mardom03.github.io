@@ -8,6 +8,18 @@ import { Component, HostListener } from '@angular/core';
 export class ProjectsComponent {
   projects = [
     {
+      link: "https://github.com/mardom03/cashflow-assistant",
+      title: "QuickBooks Cashflow Assistant",
+      description: "Flask web app that connects to QuickBooks Online API to provide cashflow insights (Python)",
+      year: 2026
+    },
+    {
+      link: "https://github.com/mardom03/DCR-verification",
+      title: "DCR Graph Tool (with system architecture report)",
+      description: "University of Copenhagen software architecture project for drawing and verifying business process models (React)",
+      year: 2024
+    },
+    {
       link: "https://github.com/mardom03/Vix-Emailer",
       title: "Vix Emailer",
       description: "Simple Windows service to scrape Yahoo Finance and email me when VIX is high (C#)",

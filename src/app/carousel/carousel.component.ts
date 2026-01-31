@@ -21,20 +21,38 @@ export class CarouselComponent implements AfterViewInit {
 
   jobs = [
     {
+      company: "Charter Communications",
+      image: "assets\\images\\spectrum.jpg",
+      title: "Associate Software Engineer",
+      duration: "June 2025 - Present",
+      bullets: [
+        "Selected for a rotational Software Engineer program spanning web application development, cybersecurity, and service activation, supporting enterprise-scale internal and customer-facing systems",
+        "Quickly ramped up on Angular and MongoDB to take ownership of a core web application feature (user calendar), delivering a full epic enabling create, edit, and delete workflows for recurring events",
+        "Led end-to-end implementation of a major application component, collaborating with offshore development teams and delivering one of the team's primary quarterly deliverables",
+        "Transitioned into a cybersecurity rotation focused on web application penetration testing and remediation validation",
+        "Became the primary engineer responsible for retesting applications after remediation, validating that fixes addressed previously identified vulnerabilities using Burp Suite",
+        "Coordinated access and testing logistics across 50+ application teams, navigating diverse authentication and onboarding processes to unblock security validation efforts",
+        "Shadowed senior penetration testers and executed structured vulnerability assessments using team checklists and workflows managed in AttackForge",
+        "Built a Python (Tkinter) internal utility integrating with AttackForge APIs to automate time tracking and update engagement metadata, improving visibility into team workload and reducing manual effort",
+        "Demonstrated strong adaptability across disciplines, moving between product development, security engineering, and internal tooling within a short timeframe"
+      ]
+    },
+    {
       company: "Skyward Inc.",
       image: "assets\\images\\skyward.jpg",
-      title: "Software Engineer",
+      title: "Associate DevOps Engineer",
       duration: "June 2022 - February 2025",
       bullets: [
-        "Contributed to the Professional Services team, working on a variety of tasks to ensure smooth development operations throughout the company",
-        "Built C# web applications (ASP.NET, Blazor, MVC) for internal websites",
-        "Integrated REST APIs to retrieve data from external systems, improving efficiency and data accuracy",
-        "Managed databases with SQL queries for data retrieval, manipulation, and optimization",
-        "Wrote and deployed IIS sites and Windows services to improve automation and development workflow",
-        "Utilized GitHub for version control and managed workflows for our custom build processes",
-        "Worked closely with migration teams to identify pain points and streamline data migration processes, resulting in smoother transitions for clients",
-        "Acted as a primary point of contact for service calls, promptly resolving issues and providing technical assistance to developers and system managers",
-        "Engaged in Agile development practices, participating in daily stand-up meetings and collaborating with cross-functional teams"
+        "Contributed to a Professional Services / Platform Engineering team supporting the company's release cycle, internal developer tooling, and customer-adjacent production systems",
+        "Designed, built, and maintained internal C#/.NET applications (ASP.NET, Blazor, MVC) used to manage releases, environments, and operational workflows across engineering and QA",
+        "Owned and refactored an internal platform managing hundreds of shared test environments for 300+ developers, enabling centralized provisioning, load-balanced usage, and improved developer velocity",
+        "Led a redesign of the environment lifecycle system, introducing automated provisioning, renewal, and cleanup workflows that reduced manual setup time from ~1 hour to ~5 minutes",
+        "Developed and maintained production Windows Services and IIS-hosted applications supporting customer data migrations, real-time monitoring, and internal operations",
+        "Wrote complex SQL Server queries and database migrations to support real-time systems, improve observability, and resolve production issues",
+        "Implemented GitHub Actions CI/CD pipelines to enforce coding standards, validate database migrations, automate builds, and streamline release workflows",
+        "Supported customer data migration processes by debugging backend services, diagnosing production failures, and collaborating with cross-functional teams to resolve issues beyond simple restarts",
+        "Served as a primary technical contact for service calls, resolving incidents, improving internal tooling, and reducing recurring operational pain points",
+        "Worked within an Agile environment, collaborating closely with developers, QA, and operations to deliver reliable, production-grade systems"
       ]
     },
     {

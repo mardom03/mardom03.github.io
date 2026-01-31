@@ -6,24 +6,35 @@
   z-index: 1030;
 }
 
+img{
+  height: 30px;
+  width: auto;
+  display: inline-block;
+}
+
 .marty-header {
   color: white;
-  font-size: calc(1vw * 1.3);
   font-family: "Geologica", "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
   text-decoration: none;
   white-space: nowrap;
   position: relative;
-  top: .3vw;
+  font-size: 18px;
+}
+
+@media (min-width: 1024px) {
+  .marty-header {
+    font-size: 24px;
+  }
+
+  img{
+    height: 40px;
+    width: auto;
+  }
 }
 
 .marty-header:hover {
   color: #bed8d4;
   transition: all .25s ease;
-}
-
-img{
-  height: calc(2vw * 1.2);
-  display: inline-block;
 }
 
 .col-2 {
@@ -37,9 +48,9 @@ img{
 #bar-thing{
   position:absolute;
   width: 16.4%;
-  height:calc(3vw * .12); 
+  height: 5px; 
   margin:0;
-  top: calc(1.06 * 3vw);
+  top: 53px;
   left:-20%;
   overflow:hidden;
   background-color: white;
