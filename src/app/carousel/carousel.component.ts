@@ -29,11 +29,11 @@ export class CarouselComponent implements AfterViewInit {
         "Selected for a rotational Software Engineer program spanning web application development, cybersecurity, and service activation, supporting enterprise-scale internal and customer-facing systems",
         "Quickly ramped up on Angular and MongoDB to take ownership of a core web application feature (user calendar), delivering a full epic enabling create, edit, and delete workflows for recurring events",
         "Led end-to-end implementation of a major application component, collaborating with offshore development teams and delivering one of the team's primary quarterly deliverables",
-        "Transitioned into a security-focused rotation supporting web application vulnerability validation and remediation efforts",
-        "Served as the primary engineer responsible for post-remediation validation, confirming that fixes addressed previously identified web application vulnerabilities using Burp Suite",
-        "Coordinated access and testing logistics across 50+ application teams, navigating diverse authentication and onboarding processes to unblock validation and release workflows",
-        "Collaborated with senior penetration testers to execute structured vulnerability assessments using standardized checklists and workflows managed in AttackForge",
+        "Supported web application vulnerability validation and remediation, serving as the primary engineer to confirm fixes using Burp Suite and coordinating testing across 50+ application teams",
+        "Collaborated with senior penetration testers to execute structured assessments and automate workflow tracking via AttackForge, improving validation efficiency and release readiness",
         "Built a Python (Tkinter) internal utility integrating with AttackForge APIs to automate time tracking and update engagement metadata, improving visibility into team workload and reducing manual effort",
+        "Onboarded to a complex Java microservices platform orchestrating customer service provisioning (internet, voice, video), learning system architecture, workflows, and Camunda orchestration",
+        "Developed Groovy-based test scripts to validate service activation workflows and ensure reliable execution across backend systems",
         "Won first place in an internal hackathon by building an AI-assisted workflow tool using Claude to streamline stakeholder release approvals, reducing manual checkoffs and improving visibility across application delivery teams",
         "Demonstrated strong adaptability across disciplines, moving between product development, security engineering, and internal tooling within a short timeframe"
       ]

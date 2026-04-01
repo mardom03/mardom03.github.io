@@ -14,6 +14,12 @@ export class ProjectsComponent {
       year: 2026
     },
     {
+      link:"https://github.com/mardom03/MPECWebsite",
+      title: "Business Website",
+      description: "Example one pager business website (Svelte)",
+      year: 2025
+    },
+    {
       link: "https://github.com/mardom03/DCR-verification",
       title: "DCR Graph Tool (with system architecture report)",
       description: "University of Copenhagen software architecture project for drawing and verifying business process models (React)",
